@@ -1,0 +1,13 @@
+body{
+    background: lightblue;
+}
+.login-div{
+    width: fit-content;
+    height: fit-content;
+    background :lightblue;
+    margin-left: 40%;
+    margin-top: 200px;
+}
+#log-btn:hover{
+    background: #42daf5;
+}
