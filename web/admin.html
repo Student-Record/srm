@@ -4,29 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>admin</title>
-    <link href="admin.css" type="text/css" rel="stylesheet">
+    <link href="css/admin.css" type="text/css" rel="stylesheet">
 </head>
 <body>
     <div class="root-div">
         <div class="header">
             <div class="head-left-sec">
-                <h1 style="color: aliceblue;">SRMS</h1>
+                <h1 style="color: aliceblue;">Student Record Management System</h1>
             </div>
             <div class="head-right-sec">
-                <input id="logout-btn" type="button" value="Logout">
+                <a href="login.html"><button id="logout-btn">Logout</button></a>
             </div>
            
 
         </div>
         <div class="content">
             <div class="left-section">
-                <input class="dash" type="button" value="Dashboard">
-                <input class="dash" type="button" value="Add student">
-                <input class="dash" type="button" value="Manage student">
-
+                <h3 id="dash-head">Dashboard</h3>
+                <a href="course.html"><button class="dash">Course</button></a> 
+                <button class="dash">Subject</button>
+                <a href="add_student.html"><button class="dash">Register</button></a>
+                <button class="dash">Admin Profile</button>
+                <button class="dash">Logout</button>
             </div>
             <div class="right-section">
-                <h1></h1>
+                <div class="up-head">
+                    <h2>Welcome Admin</h2>
+                </div>
+                <div class="down">
+                    <div class="down-head">
+                        <h3>Home</h3>
+                    </div>
+                    <div class="down-content">
+                        <button class="home-btn">View Detailes</button>
+                        <button class="home-btn">View Teachers</button>
+                        <button class="home-btn">View Students</button>
+                    </div>
+
+                </div>
+                
             </div>
         </div>
     </div>
