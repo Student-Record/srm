@@ -1,3 +1,4 @@
 /dist/build/empty
 build/*
 dist/*
+nbproject/*
