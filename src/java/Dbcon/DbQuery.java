@@ -22,4 +22,17 @@ public class DbQuery {
         }
     }
 
+    public int addStudent(String name , String rollno, String dob ,  String gender , String phone , String year , String departmentId, String admissionNo ){
+        int i = 0 ;
+        try{
+            String str="INSERT INTO student(AdmissionNO,NAME,RollNo,DOB,Gender,phone,YEAR,DepartmentId) VALUES('"+admissionNo+"','"+name+"','"+rollno+"','"+dob+"','"+gender+"','"+phone+"','"+year+"','"+departmentId+"')";
+            i = st.executeUpdate(str) ;
+        }catch(Exception e){
+            System.err.println(e.toString()) ;
+        }
+        return i ; 
+    }
+
+    
+
 }
