@@ -12,17 +12,21 @@
             <div class="head-left-sec">
                 <h1 style="color: aliceblue;">Student Record Management System</h1>
             </div>
+            <div class="head-right-sec">
+                <a href="login.jsp"><button id="logout-btn">Logout</button></a>
+            </div>
            
 
         </div>
         <div class="content">
             <div class="left-section">
                 <h3 id="dash-head">Dashboard</h3>
-                <a href="course_detales.html"><button class="dash">Course</button></a> 
                 <!-- <a href="add_teacher.html"><button class="dash">Reg. Teachers</button></a> -->
+                <a href="course_detales.jsp"><button class="dash">Course</button></a> 
+<!--                <a href="add_teacher.jsp"><button class="dash">Reg. Teachers</button></a>-->
                 <a href="add_student.jsp"><button class="dash">Reg. students</button></a>
                 <!-- <button class="dash">View HOD</button> -->
-                <a href="login.html"><button class="dash">Logout</button></a>
+                <a href="login.jsp"><button class="dash">Logout</button></a>
             </div>
             <div class="right-section">
                 <div class="up-head">
@@ -33,9 +37,9 @@
                         <h3>Home</h3>
                     </div>
                     <div class="down-content">
-                        <a href="view_hod.html"><button class="home-btn">View HOD</button></a>
-                        <a href="view_teach.html"><button class="home-btn">View Teachers</button></a>
-                        <a href="view_student.html"><button class="home-btn">View Students</button></a>
+                        <a href="view_hod.jsp"><button class="home-btn">View HOD</button></a>
+                        <a href="view_teach.jsp"><button class="home-btn">View Teachers</button></a>
+                        <a href="view_student.jsp"><button class="home-btn">View Students</button></a>
                     </div>
 
                 </div>

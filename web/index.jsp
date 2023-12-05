@@ -10,7 +10,7 @@
    <div class="main-body">
     <div class="head">
         <div class="heading">
-            <a href="login.html"><h1>SRMS</h1></a>
+            <a href="login.jsp"><h1>SRMS</h1></a>
         </div>
         <div class="buttons">
 

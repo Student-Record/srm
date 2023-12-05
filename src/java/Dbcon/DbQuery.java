@@ -32,6 +32,16 @@ public class DbQuery {
         }
         return i ; 
     }
+    
+    public ResultSet login(String id,String password){
+        try {
+            String str="SELECT * FROM `faculty` WHERE facultyId='"+id+"' AND password='"+password+"'";
+            rs=st.executeQuery(str);
+        } catch (Exception e) {
+            System.err.print(e.toString());
+        }
+        return rs;
+    }
 
     
 
