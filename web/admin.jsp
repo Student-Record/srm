@@ -12,9 +12,9 @@
             <div class="head-left-sec">
                 <h1 style="color: aliceblue;">Student Record Management System</h1>
             </div>
-            <div class="head-right-sec">
+            <!-- <div class="head-right-sec">
                 <a href="login.jsp"><button id="logout-btn">Logout</button></a>
-            </div>
+            </div> -->
            
 
         </div>

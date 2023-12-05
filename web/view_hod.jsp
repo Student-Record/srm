@@ -20,8 +20,8 @@
                     <thead>
                         <tr>
                             <th>SI no.</th>
-                            <th>ID</th>
                             <th>Name</th>
+                            <th>HOD ID</th>
                             <th>Phone no.</th>
                             <th>Department</th>
                             <th>salary</th>

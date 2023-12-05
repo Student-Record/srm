@@ -9,7 +9,7 @@
 <body>
     <div class="main-body">
         <div class="search">
-           <table>
+           <table class="tab">
                 <tbody>
                     <tr>
                         <td>Year</td>
@@ -43,7 +43,18 @@
            </table>
         </div>
         <div class="list">
-
+            <table border="1">
+                <thead>
+                    <th>SI No.</th>
+                    <th>Course</th>
+                    <th>Course Code</th>
+                </thead>
+                <tbody>
+                    <td>1</td>
+                    <td>Formal language and automated theory</td>
+                    <td>CST301</td>
+                </tbody>
+            </table>
         </div>
     </div>
     
