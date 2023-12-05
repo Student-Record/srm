@@ -1,3 +1,7 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="Dbcon.DbQuery"%>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,39 +13,52 @@
 <body>
     <div class="main-body">
         <div class="search">
-           <table class="tab">
-                <tbody>
-                    <tr>
-                        <td>Year</td>
-                        <td>
-                            <select class="select-box">
-                                <option>1st year</option>
-                                <option>2nd year</option>
-                                <option>3rd year</option>
-                                <option>4th year</option>
-                           </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Department</td>
-                        <td>
-                            <select class="select-box">
-                                <option>Computer science and engg.</option>
-                                <option>Mechanical engg.</option>
-                                <option>Chemical engg.</option>
-                                <option>civil engg.</option>
-                                <option>EEE</option>
-                                <option>EC</option>
+           <form>
+            <table class="tab">
+                 <tbody>
+                     <tr>
+                         <td>Year</td>
+                         <td>
+                             <select class="select-box" id="year" name="year">
+                                 <option value="1">1st year</option>
+                                 <option value="2">2nd Year</option>
+                                 <option value="3">3rd year</option>
+                                 <option value="4">4th Year</option>
                             </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><button style="width: 75px; height: 30px;">Submit</button></td>
-                    </tr>
-            </tbody>
-           </table>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>Department</td>
+                         <td>
+                             <select class="select-box" id="dept" name="dept">
+                                 <option value="101">CSE</option>
+                                 <option value="102">EEE</option>
+                                 <option value="103">Civil</option>
+                                 <option value="104">EC</option>
+                                 <option value="105">Mech</option>
+                                 <option value="106">Chem</option>
+                             </select>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td></td>
+                         <td><input type="submit" value="submit" name="submit" /></td>
+                     </tr>
+             </tbody>
+            </table>
+            </form>
         </div>
+        
+        <%
+                DbQuery db = new DbQuery() ; 
+                if(request.getParameter("submit")!= null ){
+                    String year = request.getParameter("year"); 
+                    String dept = request.getParameter("dept"); 
+                    ResultSet rs = db.viewCourse(dept, year) ; 
+                    if(rs.next()){
+                
+
+            %>
         <div class="list">
             <table border="1">
                 <thead>
@@ -49,15 +66,30 @@
                     <th>Course</th>
                     <th>Course Code</th>
                 </thead>
-                <tbody>
+                    <%
+                        int i = 1; 
+                        do{
+                            %>
+                  
                     <tr>
-                        <td>1</td>
-                        <td>Formal language and automated theory</td>
-                        <td>CST301</td>
+<!--                        <td></td>
+                        <td></td>
+                        <td></td>-->
+                        <td><%=i%></td>
+                        <td><%=rs.getString("name")%></td>
+                        <td><%=rs.getString("courseid")%></td>
                     </tr>
-                    
-                </tbody>
+                    <%
+                        i++;  
+                    }while(rs.next()) ; 
+                        %>
             </table>
+            <% }else{
+                %>
+                <h1>No data</h1>
+            <%
+                }}
+            %>
         </div>
     </div>
     

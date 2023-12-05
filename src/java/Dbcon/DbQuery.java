@@ -43,6 +43,16 @@ public class DbQuery {
         return rs;
     }
 
+    public ResultSet viewCourse(String department , String year ){
+        try{
+            String str="SELECT * FROM course WHERE year='"+year+"' AND departmentId='"+department+"'" ; 
+            rs= st.executeQuery(str) ; 
+        }catch (Exception e){
+            System.err.print(e.toString()) ; 
+        }
+        return rs ; 
+    }
+
     
 
 }
