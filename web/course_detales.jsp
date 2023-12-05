@@ -50,9 +50,12 @@
                     <th>Course Code</th>
                 </thead>
                 <tbody>
-                    <td>1</td>
-                    <td>Formal language and automated theory</td>
-                    <td>CST301</td>
+                    <tr>
+                        <td>1</td>
+                        <td>Formal language and automated theory</td>
+                        <td>CST301</td>
+                    </tr>
+                    
                 </tbody>
             </table>
         </div>
