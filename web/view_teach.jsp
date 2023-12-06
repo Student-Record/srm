@@ -1,3 +1,7 @@
+
+<%@page import="java.sql.ResultSet"%>
+<%@page import="Dbcon.DbQuery"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +20,14 @@
                 
             </div>
             <div class="content">
+                 <%
+                DbQuery db = new DbQuery() ; 
+               
+                    ResultSet rs = db.viewFaculty() ; 
+                    if(rs.next()){
+                
+
+            %>
                 <table border="1" id="tab">
                     <thead>
                         <tr>
@@ -28,16 +40,32 @@
                         </tr>
                     </thead>
                     <tbody style="height: 20px;">
+                        
+                        <%
+                            int i = 0 ; 
+                            do {
+                            %>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td><%=i%></td>
+                            <td><%=rs.getString("facultyId")%></td>
+                            <td><%=rs.getString("name")%></td>
+                            <td><%=rs.getString("phone")%></td>
+                            <td><%=rs.getString("DepartmentName")%></td>
+                            <td><%=rs.getString("salary")%></td>
                         </tr>
+                        <%  
+                                i++ ; 
+                            }while(rs.next()) ;
+                            %>
                     </tbody>
                 </table>
+                    <%
+                        }else{
+                        %>
+                        <h1>No data</h1>
+                        <%
+                            }
+                            %>
             </div>
         </div>
     </div>
