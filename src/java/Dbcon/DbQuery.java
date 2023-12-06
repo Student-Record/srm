@@ -63,6 +63,15 @@ public class DbQuery {
         return rs ; 
     }
 
-    
+      public ResultSet viewHod(){
+        try{
+            String str="SELECT HOD.id AS id ,HOD.departmentId AS dept,faculty.name AS NAME,faculty.phone AS phone , faculty.salary AS salary ,department.DepartmentName AS deptName FROM HOD,faculty,department WHERE HOD.id = faculty.facultyId AND department.DepartmentId = HOD.departmentId" ; 
+            rs= st.executeQuery(str) ; 
+        }catch (Exception e){
+            System.err.print(e.toString()) ; 
+        }
+        return rs ; 
+    }
+
 
 }
