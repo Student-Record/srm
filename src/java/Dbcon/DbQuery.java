@@ -52,6 +52,16 @@ public class DbQuery {
         }
         return rs ; 
     }
+    
+    public ResultSet viewStudent(){
+        try{
+            String str="SELECT * FROM student ORDER BY DepartmentId" ; 
+            rs= st.executeQuery(str) ; 
+        }catch (Exception e){
+            System.err.print(e.toString()) ; 
+        }
+        return rs ; 
+    }
 
     
 

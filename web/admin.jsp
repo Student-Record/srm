@@ -23,8 +23,8 @@
                 <h3 id="dash-head">Dashboard</h3>
                 <!-- <a href="add_teacher.html"><button class="dash">Reg. Teachers</button></a> -->
                 <a href="course_detales.jsp"><button class="dash">Course</button></a> 
-<!--                <a href="add_teacher.jsp"><button class="dash">Reg. Teachers</button></a>-->
-                <a href="add_student.jsp"><button class="dash">Reg. students</button></a>
+                <a href="add_student.jsp"><button class="dash">Reg. Student</button></a>
+                <a href="view_student.jsp"><button class="dash">View students</button></a>
                 <!-- <button class="dash">View HOD</button> -->
                 <a href="login.jsp"><button class="dash">Logout</button></a>
             </div>
